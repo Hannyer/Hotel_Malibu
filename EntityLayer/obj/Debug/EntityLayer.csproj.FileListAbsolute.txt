@@ -1,0 +1,12 @@
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\CapaEntidad\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\CapaEntidad\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\EntityLayer\bin\Debug\CapaEntidad.dll
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\EntityLayer\bin\Debug\CapaEntidad.pdb
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\EntityLayer\obj\Debug\CapaEntidad.dll
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\EntityLayer\obj\Debug\CapaEntidad.pdb
