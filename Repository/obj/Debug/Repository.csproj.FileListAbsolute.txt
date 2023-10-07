@@ -16,3 +16,15 @@ C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservati
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Repository\bin\Debug\Repository.pdb
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Repository\obj\Debug\Repository.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Repository\obj\Debug\Repository.pdb
+<<<<<<< HEAD
+=======
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\bin\Debug\Repository.dll
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\bin\Debug\Repository.pdb
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\bin\Debug\CapaEntidad.dll
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\bin\Debug\CapaEntidad.pdb
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\obj\Debug\Repository.dll
+C:\Users\AXEL RUGAMA\Desktop\Todo\MR_Proyecto\Repository\obj\Debug\Repository.pdb
+>>>>>>> fe7e9e6bb35be75f989a46f291e2986f1e00b549
