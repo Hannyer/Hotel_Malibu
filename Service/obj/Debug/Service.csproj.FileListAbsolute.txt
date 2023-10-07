@@ -51,7 +51,6 @@ C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservati
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\roslyn\VBCSCompiler.exe
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\Antlr3.Runtime.dll
-C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\CapaDatos.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\CapaEntidad.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\Microsoft.Web.Infrastructure.dll
@@ -68,7 +67,6 @@ C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservati
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\Unity.Container.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\WebGrease.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\CapaEntidad.pdb
-C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\CapaDatos.pdb
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\System.Web.Helpers.xml
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\System.Web.Mvc.xml
@@ -94,3 +92,5 @@ C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservati
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\obj\Debug\Service.csproj.CopyComplete
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\obj\Debug\Service.dll
 C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\obj\Debug\Service.pdb
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\Repository.dll
+C:\Users\hpittersonm\Documents\Proyectos\Malibu_Reservation\SLN_Malibu_Reservation\Service\bin\Repository.pdb

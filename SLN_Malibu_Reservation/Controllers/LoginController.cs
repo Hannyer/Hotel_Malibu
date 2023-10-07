@@ -17,6 +17,7 @@ namespace SLN_Malibu_Reservation
         }
         public ActionResult Index()
         {
+            Session["User"] = null;
             return View();
         }
 
@@ -27,10 +28,11 @@ namespace SLN_Malibu_Reservation
             if (ModelState.IsValid)
             {
                 var user = _UserService.GetList(model).Where(x=>x.User.ToLower()==model.User.ToLower()).FirstOrDefault();
-              
+                
                 if (user!=null  )
                 {
-                    if (UtilitarioE.DesencriptarString(user.Password) == model.Password) { 
+                    if (UtilitarioE.DesencriptarString(user.Password) == model.Password) {
+                        Session["User"] = user;
                     return RedirectToAction("Index", "Home");
 
                     }

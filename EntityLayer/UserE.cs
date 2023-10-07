@@ -16,5 +16,9 @@ namespace EntityLayer
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
         public string Password { get; set; }
+
+        [Required(ErrorMessage = "Debe seleccionar un perfil para el usuario.")]
+        [Display(Name = "Perfil")]
+        public int Id_Role { get; set; }
     }
 }

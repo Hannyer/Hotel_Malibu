@@ -1,0 +1,76 @@
+﻿@model IEnumerable<EntityLayer.MenuE>
+
+@{
+    ViewBag.Title = "Permissons";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>Permissons</h2>
+
+
+<table class="table">
+    <tr>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS_Menu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creeate_Menu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edit_Menu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.View_Menu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Send_Menu)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPTION)
+            </td>
+
+
+            <td>
+                @Html.CheckBoxFor(modelItem=>item.Send_Menu)
+            </td>
+            <td>
+                @Html.CheckBoxFor(modelItem => item.Creeate_Menu)
+            </td>
+            <td>
+                @Html.CheckBoxFor(modelItem => item.Edit_Menu)
+            </td>
+            <td>
+                @Html.CheckBoxFor(modelItem => item.View_Menu)
+            </td>
+            <td>
+              
+                @Html.CheckBoxFor(modelItem=>item.Send_Menu)
+            </td>
+
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>*@
+        </tr>
+    }
+
+</table>
