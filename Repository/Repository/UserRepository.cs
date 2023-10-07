@@ -37,7 +37,8 @@ namespace Repository.Repository
                                 List.Add(new UserE() {
                                     ID = Convert.ToInt32(reader["ID"].ToString()),
                                     User = reader["User"].ToString(),
-                                    Password = reader["Password"].ToString()
+                                    Password = reader["Password"].ToString(),
+                                    Id_Role = Convert.ToInt32(reader["Id_Role"].ToString())
                                 });      
                             }
                             return List;

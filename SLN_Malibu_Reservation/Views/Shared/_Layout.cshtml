@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using EntityLayer
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,7 +10,19 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet" />
 
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Library/fontawesome-free-5.15.4-web/css/svg-with-js.min.css" rel="stylesheet" />
+    <link href="~/Library/fontawesome-free-5.15.4-web/css/fontawesome.min.css" rel="stylesheet" />
+
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Library/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+    <script src="~/Library/fontawesome-free-5.15.4-web/js/fontawesome.min.js"></script>
     <style>
+        .dropdown-menu .nav-link i {
+            margin-right: 10px; /* Ajusta el valor según tus preferencias para el espaciado */
+        }
 
         .sidebar {
             background-color: #333;
@@ -25,6 +38,14 @@
             .sidebar .nav-link {
                 color: white;
             }
+
+        .dropdown-menu {
+            width: 100%;
+            max-height: 420px; /* Ajusta la altura máxima según tus necesidades */
+            overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+            font-size: 16px; /* Ajusta el tamaño de fuente según tus preferencias */
+            padding: 10px; /* Ajusta el relleno interior según tus preferencias */
+        }
     </style>
 </head>
 <body>
@@ -35,24 +56,78 @@
                     <i class="fas fa-list"></i>
                 </button>
             </div>
-            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+
+            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar" style="padding-top:3rem;">
+                <h4 class="pb-3" style="text-align: center;">Malibú Reservation</h4>
                 <div class="position-sticky">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
-                        </li>
+                        @{
+                            List<MenuE> List = Session["List_Menu"] as List<MenuE>;
+                            string PK_PARENT_CODE = "0";
+
+                            List<MenuE> Parent_List_Menu = new List<MenuE>();
+                            List<MenuE> Child_List_Menu = new List<MenuE>();
+
+                            Parent_List_Menu = List.ToList().Where(x => x.PARENT_CODE == PK_PARENT_CODE).ToList();
+
+                            foreach (MenuE iMenu_Parent in Parent_List_Menu)
+                            {
+                                Child_List_Menu = List.ToList().Where(x => x.PARENT_CODE == iMenu_Parent.ID.ToString()).ToList();
+
+                                if (Child_List_Menu.Count <= 0)
+                                {
+                                    <li class="nav-item input-group">
+
+                                        <i class="@(iMenu_Parent.ICON)" style=" margin-top: 0.8rem; margin-left: 1rem;"></i> @Html.ActionLink(iMenu_Parent.DESCRIPTION, iMenu_Parent.ACTION, iMenu_Parent.CONTROLLER, new { area = "" }, new { @class = "nav-link text-light", style = "padding-left: 0.5rem;width: 10rem;float: right;" })
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle text-light dropdown-toggle-link">
+                                            <i class="@(iMenu_Parent.ICON)" ></i> @iMenu_Parent.DESCRIPTION
+                                        </a>
+                                        <ul class="dropdown-menu bg-light">
+                                            @foreach (var item in Child_List_Menu)
+                                            {
+                                                if (List.Any(x => x.PARENT_CODE == item.ID.ToString()))
+                                                {
+                                                    <li class="nav-item">
+                                                        <a href="#" class="nav-link dropdown-toggle text-dark dropdown-toggle-link">
+                                                            <i class="@(item.ICON)"></i>
+                                                            @item.DESCRIPTION
+                                                        </a>
+                                                        <ul class="dropdown-menu bg-light" aria-labelledby="submenu-@item.ID">
+                                                            @foreach (var subitem in List.Where(x => x.PARENT_CODE == item.ID.ToString()))
+                                                            {
+                                                                <li class="nav-item" style="display: inline-flex; ">
+                                                                    <i class="@(subitem.ICON)  col-2"></i>  @Html.ActionLink(subitem.DESCRIPTION, subitem.ACTION, subitem.CONTROLLER, new { area = "" }, new { @class = "nav-link text-dark col-6  float-right" })
+                                                                </li>
+                                                            }
+                                                        </ul>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li class="nav-item">
+                                                        <div style="float: left; padding-top: 0.6rem; " class="col-2"><i class="@(item.ICON) col-2"></i></div>  @Html.ActionLink(item.DESCRIPTION, item.ACTION, item.CONTROLLER, new { area = "" }, new { @class = "nav-link text-dark col-8  float-right" })
+                                                    </li>
+
+                                                }
+                                            }
+                                        </ul>
+                                    </li>
+                                }
+                            }
+                        }
                     </ul>
                 </div>
             </nav>
+
+
+
+
+
             <!-- Contenido principal -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="container">
@@ -67,6 +142,18 @@
     @RenderSection("scripts", required: false)
 
     <script>
+        $(document).ready(function () {
+            $(".dropdown-toggle-link").on("click", function (e) {
+                e.preventDefault();
+                var dropdownMenu = $(this).next('.dropdown-menu');
+
+                if (dropdownMenu.is(":visible")) {
+                    dropdownMenu.hide();
+                } else {
+                    dropdownMenu.show();
+                }
+            });
+        });
 
         document.getElementById('toggleSidebar').addEventListener('click', function () {
             var sidebar = document.querySelector('.sidebar');
